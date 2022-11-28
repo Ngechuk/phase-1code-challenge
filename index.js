@@ -58,17 +58,17 @@ function checkSpeed(vSpeed){
 
 
 
-const promptBasicSalary = require(`prompt-sync`)();
+const promptBasicSalary = require(`prompt-sync`)();//this directs the user for input to the program
 let basicSalary = promptBasicSalary("Enter basicSalary:")
 const promptBenefits = require(`prompt-sync`)();
 let benefits = promptBenefits("Enter benefits:")
 
 //below function is used to dispaly all the calculated stuff and then display them in tabular data-structure
 function netSalaryCalculator (){
-    const grossSalary = Number(basicSalary + benefits);
-    const nssf = calculateNSSF(grossSalary);
+    const grossSalary = Number(basicSalary + benefits);// const is used below to declare the different variables
+    const nssf = calculateNSSF(grossSalary);//
     const taxableIncome = grossSalary-nssf;
-    const taxBeforeRelief = calculateTax(taxableIncome);
+    const taxBeforeRelief = calculateTax(taxableIncome);//
     const personalRelief = 2400;
     const nhif = calculateNHIF(grossSalary);
     const insuranceRelief = nhif*0.15;
@@ -87,11 +87,11 @@ function netSalaryCalculator (){
     };
 
     console.table(result);
-    console.log(`Your net salary is : ${netPay} Ksh`)
+    console.log(`Your net salary is : ${netPay} Ksh`)//outputs the net salary
 }
 
-//calculates NSSF by using basic salary as the argument
 function calculateNSSF(basicSalary){
+    //uses the function calculate to calculate basic salary
     let nssf;
     if(basicSalary<=6000){
         nssf = basicSalary*0.06;
@@ -105,12 +105,12 @@ function calculateNSSF(basicSalary){
     return nssf;
 }
 
-function calculateTax(taxableIncome){
+function calculateTax(taxableIncome){ //calculates the taxable income from basic salary
     let tax = 0.01;
-    if(taxableIncome<=24000){
-        tax = taxableIncome*0.1;
+    if(taxableIncome<=24000){ //statement evaluating for basic below/ equal to 24000
+        tax = taxableIncome*0.1;//rate
     }
-    else if(taxableIncome>24000 && taxableIncome<=32,333){
+    else if(taxableIncome>24000 && taxableIncome<=32,333){ //calculates for between 24k and 32k
         tax = (24000*0.1)+((taxableIncome-24000)*0.25);
     }
     else{
@@ -119,63 +119,63 @@ function calculateTax(taxableIncome){
     return tax;
 }
 
-function calculateNHIF(pay){
+function calculateNHIF(pay){//calculates deductions for nhif with salary bases set by the if else statement
     let deduction;
-    if(pay<=5999){
-        deduction = 150;
+    if(pay<=5999){//deductions for pay below 6k
+        deduction = 150;//deduction
     }
-    else if(pay>=6000 && pay<8000){
-        deduction = 300;
+    else if(pay>=6000 && pay<8000){//deductions for pay between 6k and 8k
+        deduction = 300;//deduction
     }
-    else if(pay>=8000 && pay<=11999){
-        deduction = 400;
+    else if(pay>=8000 && pay<=11999){//deductions for pay between 8k and below12k
+        deduction = 400;//deduction
     }
-    else if(pay >= 12000 && pay <= 14999){
-        deduction = 500;
+    else if(pay >= 12000 && pay <= 14999){//deductions for pay between 12k and below 15k
+        deduction = 500;//deduction
     }
-    else if(pay >= 15000 && pay <= 19999){
-        deduction = 600;
+    else if(pay >= 15000 && pay <= 19999){//deductions for pay between 15k and below 19k
+        deduction = 600;//deduction
     }
-    else if(pay >= 20000 && pay <= 24999){
-        deduction = 750;
+    else if(pay >= 20000 && pay <= 24999){//deductions for pay between 20k and below 25k
+        deduction = 750;//deduction
     }
-    else if(pay >=25000 && pay <=29999){
-        deduction = 850;
+    else if(pay >=25000 && pay <=29999){//deductions for pay between 25k and below 30k
+        deduction = 850;//deduction
     }
-    else if(pay >=30000 && pay <= 34999){
-        deduction = 900;
+    else if(pay >=30000 && pay <= 34999){//deductions for pay between 30k and below 35k
+        deduction = 900;//deduction
     }
-    else if(pay >= 35000 && pay <= 39999){
-        deduction = 950;
+    else if(pay >= 35000 && pay <= 39999){//deductions for pay between 35k and below 40k
+        deduction = 950;//deduction
     }
-    else if(pay >= 40000 && pay <= 44999){
-        deduction = 1000;
+    else if(pay >= 40000 && pay <= 44999){//deductions for pay between 40k and below 45k
+        deduction = 1000;//deduction
     }
-    else if(pay >= 45000 && pay <= 49999){
-        deduction = 1100;
+    else if(pay >= 45000 && pay <= 49999){//deductions for pay between 45k and below 50k
+        deduction = 1100;//deductions 
     }
-    else if(pay >= 50000 && pay <= 59999){
-        deduction = 1200;
+    else if(pay >= 50000 && pay <= 59999){//deductions for pay between 50k and below 60k
+        deduction = 1200;//deduction
     }
-    else if(pay >= 60000 && pay <= 69999){
-        deduction = 1300;
+    else if(pay >= 60000 && pay <= 69999){//deductions for pay between 160k and below 70k
+        deduction = 1300;//deduction
     }
-    else if(pay >= 70000 && pay <= 79999){
-        deduction = 1400;
+    else if(pay >= 70000 && pay <= 79999){//deductions for pay between 70k and below 80k
+        deduction = 1400;//deduction
     }
-    else if(pay >= 80000 && pay <= 89999){
-        deduction = 1500;
+    else if(pay >= 80000 && pay <= 89999){//deductions for pay between 80k and below 90k
+        deduction = 1500;//deduction
     }
-    else if(pay >= 90000 && pay <= 99999){
-        deduction = 1600;
+    else if(pay >= 90000 && pay <= 99999){//deductions for pay between 90k and below 100k
+        deduction = 1600;//deduction
     }
     else{
-        deduction = 1700;
+        deduction = 1700;//deductions for pay above 100k
     }
 
     return deduction;
 }
-netSalaryCalculator();
+netSalaryCalculator();//calls the fuction netSalaryCalculator
 
 
 
