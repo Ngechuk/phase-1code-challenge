@@ -1,0 +1,23 @@
+{
+  "name": "phase-1code-challenge",
+  "version": "1.0.0",
+  "description": "phase-1 challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ngechuk/phase-1code-challenge.git"
+  },
+  "keywords": [
+    "Toy",
+    "problem"
+  ],
+  "author": "Ngechuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ngechuk/phase-1code-challenge/issues"
+  },
+  "homepage": "https://github.com/Ngechuk/phase-1code-challenge#readme"
+}
