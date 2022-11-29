@@ -44,6 +44,23 @@ Conclusion
 **Instructions**
 
 Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
+            
+    Steps
+
+install apt prompt-sync for this project to run
+
+First write the code that prompts the user for input. the input includes the different data required (const promptBasicSalary = require(`prompt-sync`)
+Next step is to write function netSalaryCalculator (), what this function does is dispaly all the calculated stuff and then display them in tabular data-structure
+At the end of that function call it after the deductions to display your net salary
+Next you write the function.(function calculateNSSF(basicSalary)). this function will calculate your nssf deductions based on your basic pay.later call the function to display its calculations.
+The next function to write is (function calculateTax(taxableIncome)), what this does is calculating for taxable income, it then return a value based on the data inputed.
+
+The next function to write is the function calculateNHIF(pay). This will calculate the NHIF deductions on your pay. this will return your NHIF contibution.
+At the end you call the main function which is netSalaryCalculator() to finish the project, this has been our goal all along. The figure returned is the net salary.
+        Conclusion
+ After all thatis done its our time to push our work to the repository.Use git add . then git commit -m"comment*" ,then git push  ,remember those are to be written on different lines.       
+
+
 
 
 
