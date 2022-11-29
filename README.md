@@ -5,7 +5,19 @@ This is an individual labwork where I am supposed to complete a set of three giv
 
 ## Installation and project setup
 
+-  To get user input in nodeJs we use prompt() function
+ but we need to install the prompt sync module in our terminal using the below code
+  `npm install prompt-sync`
+
+  Then load the module in our .js file using the below code
+
+  ```js
+  const prompt = require('prompt-sync')();
+  ```
 - This project requires a computer installed with node or other compilers to run the code; a text editor, preferably VS code to write your code and also a browser for you to test the code.  
+To run the .js file we use the following command in our terminal
+    `node nameOfYourJsFile.js`
+
 
 
 ##  CHALLENGE NO. 1:Student Grade Generator (Toy Problem)
@@ -62,12 +74,10 @@ Write a program whose major task is to calculate an individual’s Net Salary by
 
 
 
+## License: 
 
+ISC License.
 
-                                                                Author
+## Author
 
-
-
-
-    
-    GitHub: https://github.com/Ngechuk
+GitHub: https://github.com/Ngechuk
