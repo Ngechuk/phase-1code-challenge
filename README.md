@@ -4,6 +4,32 @@
 This is an individual labwork where I am supposed to complete a set of three given challenges:
 
 ## Installation and project setup
+### Getting started
+In order for you to use the content on this repo ensure you have the following:
+
+- A computer that runs on either of the following; (Windows 7+, Linux, Mac OS)
+- nodejs 9.0+
+## Installation
+
+To use this repo on your machine requires some simple steps
+
+### Alternative One
+
+- Open a terminal / command line interface on your computer
+- Clone the repo by using the following:
+
+        git clone https://github.com/Ngechuk/phase-1code-challenge
+
+- Be patient as it creates a copy on your local machine for you.
+- Change directory to the repo folder:
+
+        cd phase-1code-challenge
+
+- (Optional) Open it in ``Visual Studio Code``
+
+        code .
+
+- (Alternate Option) Open it in any editor of your choice.
 
 -  To get user input in nodeJs we use prompt() function
  but we need to install the prompt sync module in our terminal using the below code
